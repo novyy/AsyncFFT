@@ -7,3 +7,9 @@ to do FFT you can devide transformation on short time slices.
 
 ## Target platform
 ESP8266
+
+## Reference
+
+### Constructors:
+
+AsyncFTT::AsyncFTT()
