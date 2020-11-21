@@ -15,12 +15,14 @@ AsyncFTT::AsyncFTT()
 
 ### Methods
 void AsyncFFT::init(uint32_t N) 
-* Initialize object. If you don't call his method then it will increase the execution time of first loop() call.
+* Initialize object. If you don't call this method then it will increase the execution time of first loop() call.
 * N - size of samples buffer you want to process
-void compute(afft::Array$ data, const std::function<void(afft::Array&)> complete)
+
+void compute(afft::Array& data, const std::function<void(afft::Array&)>& complete)
 * schedule transformation and then return immediately
 * data - array with complex numbers
-* complete - commplete callback
+* complete - completion callback
+
 void loop(uint32_t timeout);
 * give chance to do some transformation
 * timeout - max time in microseconds which can be spend on tranformation
